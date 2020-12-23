@@ -1,1 +1,30 @@
-<p>item works!</p>
+<section class="item-container">
+  <table class="car-grid">
+    <tr>
+      <td>Field</td>
+      <td>Value</td>
+    </tr>
+    <tr>
+      <td>Added from</td>
+      <td>{{car.post.protocol}}</td>
+    </tr>
+    <tr>
+      <td>Vehicle</td>
+      <td>{{ car.manufacturer }}</td>
+    </tr>
+    <tr>
+      <td>Price</td>
+      <td>{{ car.cost.amount + car.cost.currencyCode}}</td>
+    </tr>
+  </table>
+
+  <!-- <div>Field</div>
+  <div>Value</div>
+  <div>Added from</div>
+  <div>{{car.post.protocol}}</div>
+  <div>Vehicle</div>
+  <div>{{ car.manufacturer }} - {{ car.model }} ({{ car.fuel }})</div>
+  <div>Price</div>
+  <div>{{car.cost.amount + car.cost.currencyCode}}</div> -->
+</section>
+
