@@ -1,30 +1,17 @@
-<section class="item-container">
+
+<a href="https://www.google.com/search?q={{ car.vehicle }}" class="link" target="_blank">
   <table class="car-grid">
-    <tr>
-      <td>Field</td>
-      <td>Value</td>
-    </tr>
-    <tr>
-      <td>Added from</td>
-      <td>{{car.post.protocol}}</td>
-    </tr>
-    <tr>
-      <td>Vehicle</td>
-      <td>{{ car.manufacturer }}</td>
-    </tr>
-    <tr>
-      <td>Price</td>
-      <td>{{ car.cost.amount + car.cost.currencyCode}}</td>
-    </tr>
+      <tr appProtocol>
+        <td class="bold">Added from<a href=""></a></td>
+        <td>{{car.post.protocol}}<a href=""></a></td>
+      </tr>
+      <tr>
+        <td class="bold">Vehicle</td>
+        <td>{{ car.manufacturer }} - {{ car.model }} ({{ car.fuel }})</td>
+      </tr>
+      <tr>
+        <td class="bold">Price</td>
+        <td>{{ car.cost.amount | currency: car.cost.currencyCode:'symbol-narrow' }}</td>
+      </tr>
   </table>
-
-  <!-- <div>Field</div>
-  <div>Value</div>
-  <div>Added from</div>
-  <div>{{car.post.protocol}}</div>
-  <div>Vehicle</div>
-  <div>{{ car.manufacturer }} - {{ car.model }} ({{ car.fuel }})</div>
-  <div>Price</div>
-  <div>{{car.cost.amount + car.cost.currencyCode}}</div> -->
-</section>
-
+</a>

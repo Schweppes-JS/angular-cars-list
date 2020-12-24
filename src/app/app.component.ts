@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { finalize } from 'rxjs/operators';
 import { Car } from './models/Car';
 import { CarService } from './services';
 
@@ -17,9 +18,13 @@ export class AppComponent {
   }
 
   private getCars(): void {
-    this.carService.getCars().subscribe((cars: Car[]) => {
+    this.carService.getCars()
+    .pipe(
+
+      finalize(() => this.areCarsLoaded = true))
+    .subscribe((cars: Car[]) => {
       this.cars = cars;
-      this.areCarsLoaded = true;
+
     });
   }
 }

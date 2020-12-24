@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ItemComponent } from './item/item.component';
 import { appService } from './services';
+import { appDirecives } from './directives/index';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ItemComponent
+    ItemComponent,
+    ...appDirecives,
   ],
   imports: [
     BrowserModule
