@@ -1,3 +1,7 @@
+# Demo
+
+![print](./demo/demo.gif)
+
 # Live page
 
 https://schweppes-js.github.io/angular-cars-list/dist/cars-list
