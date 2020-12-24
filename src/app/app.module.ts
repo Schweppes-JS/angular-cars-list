@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { ItemComponent } from './item/item.component';
 import { appService } from './services';
 import { appDirecives } from './directives/index';
+import { appPipes } from './pipes';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemComponent,
     ...appDirecives,
+    ...appPipes,
   ],
   imports: [
     BrowserModule
